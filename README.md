@@ -5,7 +5,7 @@
 
 手順  
 1. Google formで投句フォームを作る。こんなの  
-https://docs.google.com/forms/d/1AC8tTFBcr6WIiuwXJyTwH1e4npLGlgRa-ckJq-GvgJo/edit
+https://docs.google.com/forms/d/e/1FAIpQLSdn_wIP6wl9uqbITyz3esOsvLtKeF_wVtaRoEugDHG2_UdmuQ/viewform
 2. 投句を募る。結果をスプレッドシートからtouku.csvに保存
 3. seiki.py を実行。以下が作成される
 - seiki_noname.csv: 俳号なし、順番がランダム化された句一覧
@@ -16,8 +16,8 @@ https://docs.google.com/forms/d/1AC8tTFBcr6WIiuwXJyTwH1e4npLGlgRa-ckJq-GvgJo/edi
 - seiki.pdf: 清記の縦書きpdfファイル  
 ただし、ここでは下記藤田眞作氏のホームページから入手できるhaiku.styが必要  
 http://xymtex.my.coocan.jp/fujitas2/texlatex/index.html
-6. Google formで選句フォームを作る。こんなの
-https://docs.google.com/forms/d/1n86jEDFqQthtznRrCtstHAzVfQOZTRD6ubkMMwClyf4/edit  
+6. Google formで選句フォームを作る。こんなの  
+https://docs.google.com/forms/d/e/1FAIpQLScjxcQ8su--ZyqhIGCooqbhspG2vI-hRFuYtZ5lKcJC3FFWTg/viewform  
 7. seiki.pdfをメール送信し、選句を募る。結果をスプレッドシートからsenku.csvに保存
 8. senku.py を実行。以下が作成される
 - seiki_withpoint_.csv: 俳号あり清記に点数(特選、並選、逆選の数)が追記されたもの。ただし無点句には俳号をつけない
