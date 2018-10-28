@@ -32,22 +32,21 @@ if __name__ == "__main__":
                 dfsen_out.at[dfsen_out.index[cj],"特選句"]=tokusen
             #並選*3
             if msen[cj,1]==ci+1:
-                mpoint[ci,1]=mpoint[ci,1]+1
+                mpoint[ci,1]=int(mpoint[ci,1]+1)
                 namisen=seiki_raw.at[seiki_raw.index[ci],"句"]
                 dfsen_out.at[dfsen_out.index[cj],"並選句1"]=namisen
             if msen[cj,2]==ci+1:
-                mpoint[ci,1]=mpoint[ci,1]+1
+                mpoint[ci,1]=int(mpoint[ci,1]+1)
                 namisen=seiki_raw.at[seiki_raw.index[ci],"句"]
                 dfsen_out.at[dfsen_out.index[cj],"並選句2"]=namisen
             if msen[cj,3]==ci+1:
-                mpoint[ci,1]=mpoint[ci,1]+1
+                mpoint[ci,1]=int(mpoint[ci,1]+1)
                 namisen=seiki_raw.at[seiki_raw.index[ci],"句"]
                 dfsen_out.at[dfsen_out.index[cj],"並選句3"]=namisen
             if msen[cj,4]==ci+1:
-                mpoint[ci,2]=mpoint[ci,2]+1
+                mpoint[ci,2]=int(mpoint[ci,2]+1)
                 gyakusen=seiki_raw.at[seiki_raw.index[ci],"句"]
                 dfsen_out.at[dfsen_out.index[cj],"逆選句"]=gyakusen
-
     dfpoint=pd.DataFrame(mpoint,columns=["特選数","並選数","逆選数"])
     seiki_done=pd.concat([seiki_raw,dfpoint],axis=1)
 #0点句は無記名に
