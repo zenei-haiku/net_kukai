@@ -27,7 +27,7 @@ if __name__ == "__main__":
     for ci in range(inku):
         for cj in range(inp):
             if msen[cj,0]==ci+1:
-                mpoint[ci,0]=mpoint[ci,0]+1
+                mpoint[ci,0]=int(mpoint[ci,0]+1)
                 tokusen=seiki_raw.at[seiki_raw.index[ci],"句"]
                 dfsen_out.at[dfsen_out.index[cj],"特選句"]=tokusen
             #並選*3
