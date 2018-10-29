@@ -1,7 +1,7 @@
 # net_kukai
 ネット句会自動化プログラム
 
-前提: PythonとTeXがあると良いが、Pythonだけでもある程度いける。Pythonないときつい
+前提: PythonとTeXがあると良いが、Pythonだけでもある程度いける。Pythonないときつい。Macだと化けるので、適当に文字コードの指定をいじる必要あり
 
 手順  
 1. Google formで投句フォームを作る。こんなの  
@@ -10,7 +10,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSdn_wIP6wl9uqbITyz3esOsvLtKeF_wVtaRoEug
 3. seiki.py を実行。以下が作成される
 - seiki_noname.csv: 俳号なし、順番がランダム化された句一覧
 - seiki_withname.csv: 上記の俳号あり版。下記選句の自動化に用いる
-4. （TeX処理する時のみ）seikitex.pyを実行。以下が作成される
+4. （TeX処理する時のみ）seiki_tex.pyを実行。以下が作成される
 - seiki.tex: 清記TeXファイル
 5. （Tex処理する時のみ）seiki.texをコンパイル。以下が作成される
 - seiki.pdf: 清記の縦書きpdfファイル  
@@ -21,13 +21,13 @@ https://docs.google.com/forms/d/e/1FAIpQLScjxcQ8su--ZyqhIGCooqbhspG2vI-hRFuYtZ5l
 7. seiki.pdfをメール送信し、選句を募る。結果をスプレッドシートからsenku.csvに保存
 8. senku.py を実行。以下が作成される
 - seiki_withpoint_.csv: 俳号あり清記に点数(特選、並選、逆選の数)が追記されたもの。ただし無点句には俳号をつけない
-- sen.csv: 俳号・選句・選評・自己紹介
-9. （Tex処理する時のみ）senkutex.pyを実行。以下が作成される
+- senku.csv: 俳号・選句・選評・自己紹介
+9. （Tex処理する時のみ）senku_tex.pyを実行。以下が作成される
 - seiki_withpoint.tex: 俳号・点数あり清記TeXファイル
-- sen.tex: 選評TeXファイル
-10. （Tex処理する時のみ）seiki_withpoint.tex, sen.texをコンパイル。以下が作成される
-- seiki_withpoint.pdf: 俳号・点数あり清記pdfファイル(横書き)
-- sen.pdf: 選評pdfファイル
+- senpyo.tex: 選評TeXファイル
+10. （Tex処理する時のみ）seiki_withpoint.tex, senpyo.texをコンパイル。以下が作成される
+- seiki_withpoint.pdf: 俳号・点数あり清記pdfファイル(横書き)。上に2-1とついていたら特選+並選が2, 逆選が1。読みにくいので、Excelベースで横書きpdfを作った方が良いかも
+- senpyo.pdf: 選評pdfファイル
 11. seiki_withpoint.pdf, sen.pdfをメール送信
 
 TODO
